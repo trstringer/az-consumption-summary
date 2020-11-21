@@ -11,7 +11,7 @@ install:
 		. venv/bin/activate; \
 		pip install -r requirements.txt; \
 	fi; \
-	sed 's|SOURCE_DIR|$(CURRENT_DIR)|g' ./az-consumption-summary > $(OUTPUT_BIN)
+	sed 's|SOURCE_DIR|$(CURRENT_DIR)|g' ./az-consumption-summary.sh > $(OUTPUT_BIN)
 	chmod 755 $(OUTPUT_BIN)
 
 install-report: install
