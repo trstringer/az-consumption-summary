@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCRIPT_INPUT=$(az consumption usage list)
+SCRIPT_INPUT=$(az consumption usage list -o json)
 
 BOLD=$(tput bold)
 RESET=$(tput sgr0)
