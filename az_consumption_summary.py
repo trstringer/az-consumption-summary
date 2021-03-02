@@ -51,6 +51,7 @@ def costs(
         raise Exception("Unknown group by type")
 
     consumption_summary = []
+    instance_summary = sorted(instance_summary, key=group_by_func)
     for key, group in itertools.groupby(instance_summary, key=group_by_func):
         cost = 0.0
         for group_item in group:
